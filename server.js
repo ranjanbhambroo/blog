@@ -1,7 +1,13 @@
-const express        = require('express');
-const MongoClient    = require('mongodb').MongoClient;
-const bodyParser     = require('body-parser');
+import express from 'express';
+import mongodb from 'mongodb';
+import bodyParser from 'body-parser';
+import compression from 'compression';
+import session from 'express-session';
+
+const MongoClient    = mongodb.MongoClient;
 const app            = express();
+
+
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
